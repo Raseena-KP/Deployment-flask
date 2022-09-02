@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HEART_DISEASE_PREDICTOR</title>
+    <link rel="stylesheet" type="text/css" href='/static/images/flw.jpg'>
+</head>
+<body background="/static/images/flw.jpg">
+<div class="start">
+<h1 style="text-align:center">HEART DISEASE PREDICTOR</h1>
+ <!--input form-->   
+    
+    <form action="{{ url_for('predict')}}", method="post">
+        <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+            <tr>
+                <td>
+                    <label for="male">
+                        Gender
+                    </label>    
+                </td>
+                <td><input type="checkbox" name="gender" value="0">Female    
+                    <input type="checkbox" name="gender" value="1">Male 
+                </td>
+            </tr>
+            <tr>
+                <td><label for="age">
+                        Age
+                    </label>
+                </td>
+                <td><input type="text" id="age" name="age" />
+                </td>
+            </tr>
+            <tr>
+                <td><label for="education">
+                        Education
+                    </label>
+                </td>
+                <td><select name="education" id="education" size="2" multiple="multiple">    
+                       <option value="1">1</option>    
+                       <option value="2">2</option>    
+                       <option value="3">3</option>
+                       <option value="4">4</option>     
+                    </select> 
+                </td>
+            </tr>
+            <tr>
+                <td><label for="cigsPerDay">
+                        cigsPerDay
+                    </label>
+                </td>
+                <td><input type="text" name="cigsPerDay" id="cigsPerDay" />
+                </td>
+            </tr>
+            <tr>
+                <td><label for="BPMeds">
+                        BPMeds
+                    </label>
+                </td>
+                <td><select name="BPMeds" id="BPMeds" size="2" multiple="multiple">    
+                       <option value="0">No</option>    
+                       <option value="1">Yes</option>    
+                    </select> 
+                </td>
+            </tr>
+            <tr>
+                <td><label for="prevalentStroke">
+                        prevalentStroke
+                    </label>
+                </td>
+                <td><select name="prevalentStroke" id="prevalentStroke" size="2" multiple="multiple">    
+                       <option value="0">No</option>    
+                       <option value="1">Yes</option>    
+                    </select> 
+                </td>
+            </tr> 
+            <tr>
+                <td><label for="prevalentHyp">
+                        prevalentHyp
+                    </label>
+                </td>
+                <td><select name="prevalentHyp" id="prevalentHyp" size="2" multiple="multiple">    
+                       <option value="0">No</option>    
+                       <option value="1">Yes</option>    
+                    </select> 
+                </td>
+            </tr>
+            <tr>
+                <td><label for="diabetes">
+                        diabetes
+                    </label>
+                </td>
+                <td><select name="diabetes" id="diabetes" size="2" multiple="multiple">    
+                       <option value="0">No</option>    
+                       <option value="1">Yes</option>    
+                    </select> 
+                </td>
+            </tr>
+            <tr>
+                <td><label for="totChol">
+                        totChol
+                    </label>
+                </td>
+                <td><input type="text" name="totChol" id="totChol" />
+                </td>
+             </tr>
+             <tr>
+                 <td><label for="BMI">
+                         BMI
+                     </label>
+                 </td>
+                 <td><input type="text" name="BMI" id="BMI" />
+                 </td>
+             </tr>  
+             <tr>
+                 <td><label for="heartRate">
+                         heartRate
+                     </label>
+                 </td>
+                 <td><input type="text" name="heartRate" id="heartRate" />
+                 </td>
+             </tr>  
+             <tr>
+                 <td><label for="glucose">
+                         glucose
+                     </label>
+                 </td>
+                 <td><input type="text" name="glucose" id="glucose" />
+                 </td>
+             </tr>
+             <tr>
+                 <td><label for="MAP">
+                         MAP
+                     </label>
+                 </td>
+                 <td><input type="text" name="MAP" id="MAP" />
+                 </td>
+             </tr>  
+             <tr>
+                 <td><label for="Weight">
+                         Weight
+                     </label>
+                 </td>
+                 <td><select name="Weight" id="diabetes" size="2" multiple="multiple">    
+                        <option value="1">Underweight</option>    
+                        <option value="2">Normal</option> 
+                        <option value="3">Overweight</option> 
+                        <option value="4">Obese</option>    
+                     </select>
+                 </td>
+             </tr>    
+             <tr>
+             <td></td>
+             <td>
+             <input type="submit" id="sudmit" ></button>
+             </td>
+             </tr>  
+        </table>
+     </form>
+</div>
+</body>
+</html>
